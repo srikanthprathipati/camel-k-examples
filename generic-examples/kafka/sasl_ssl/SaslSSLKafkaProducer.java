@@ -24,7 +24,7 @@ public class SaslSSLKafkaProducer extends RouteBuilder {
   @Override
   public void configure() throws Exception {
     log.info("About to start route: Timer -> Kafka ");
-    from("timer:foo")
+    from("timer:Amway")
         .routeId("FromTimer2Kafka")
         .setBody()
             .simple("Message #${exchangeProperty.CamelTimerCounter}")
