@@ -23,7 +23,7 @@ public class SaslSSLKafkaConsumer extends RouteBuilder {
   @Override
   public void configure() throws Exception {
     log.info("About to start route: Kafka Topic -> Log ");
-    from("kafka:{{consumer.topic}}"+"&groupId=camelsaslconsumerpoc")
+    from("kafka:{{consumer.topic}}"+"?groupId=camelsaslconsumerpoc")
         .routeId("FromKafka2Log")
         .log("Payload is - ${body}");
   }
